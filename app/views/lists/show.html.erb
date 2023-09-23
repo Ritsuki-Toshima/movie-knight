@@ -1,0 +1,10 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <%= @list.name %>
+</div>
+<% @list.bookmarks.each do |bookmark| %>
+  <%= image_tag bookmark.movie.poster_url, alt: "#{bookmark.movie.title} poster image" %>
+  <%= bookmark.movie.title %>
+  <%= bookmark.movie.overview %>
+  <%= bookmark.movie.rating %>
+  <%= bookmark.comment %>
+<% end %>
